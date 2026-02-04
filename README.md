@@ -1,7 +1,7 @@
 # Mini Data Platform
 
-A lightweight **real-time data processing platform** built with **PostgreSQL, Debezium, Kafka, Spark Streaming, and MinIO (Delta Lake)**.
-
+A lightweight **real-time data processing platform** built with **PostgreSQL, Debezium, Kafka, Spark Streaming, and MinIO (Delta Lake)**.\
+This project was developed as the final assignment for the Introduction to Big Data course, part of my Master's degree.
 
 ## Architecture
 
@@ -174,3 +174,4 @@ curl http://localhost:8083/connectors/postgres-connector/status
 ```
 docker compose down -v --remove-orphans
 ```
+

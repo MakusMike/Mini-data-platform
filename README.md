@@ -27,20 +27,20 @@ MinIO (Delta Lake)
 
 ## Project Structure
 
-mini-data-platform/
-├── data/
-│ ├── customers.csv
-│ ├── orders.csv
-│ └── products.csv
-├── debezium/
-│ └── connector.json
-├── python/
-│ └── csv_to_postgres.py
-├── spark/
-│ └── streaming.py
-├── deploy-platform.ps1
-├── docker-compose.yml
-├── README.md
+mini-data-platform\
+├── data\
+│ ├── customers.csv\
+│ ├── orders.csv\
+│ └── products.csv\
+├── debezium\
+│ └── connector.json\
+├── python\
+│ └── csv_to_postgres.py\
+├── spark\
+│ └── streaming.py\
+├── deploy-platform.ps1\
+├── docker-compose.yml\
+├── README.md\
 └── requirements.txt
 
 
@@ -49,23 +49,23 @@ mini-data-platform/
 ### 1. Install Python dependencies
 
 ```bash
-pip install -r requirements.txt
-
+    pip install -r requirements.txt
+```
 2. Start the platform
-
-.\deploy-platform.ps1
-
+```
+    .\deploy-platform.ps1
+```
 The script automatically:
 
-    Starts all Docker containers
+- Starts all Docker containers
 
-    Waits for services to become ready
+- Waits for services to become ready
 
-    Loads CSV data into PostgreSQL
+- Loads CSV data into PostgreSQL
 
-    Configures the Debezium connector
+- Configures the Debezium connector
 
-    Starts Spark Streaming
+- Starts Spark Streaming Job
 
 Components
 PostgreSQL (port 5432)
@@ -122,18 +122,18 @@ MinIO (ports 9000, 9001)
 
 Testing
 1. Insert test data into PostgreSQL
-
+```
 docker exec -it mini-data-platform-postgres-1 psql -U datauser -d datadb
 
 INSERT INTO orders VALUES (999, 1, 1, 5);
 INSERT INTO customers VALUES (100, 'Jan Kowalski', 'jan@example.com');
-
+```
 2. Check Spark logs
-
+```
 docker logs spark -f
-
+```
 3. Verify data in MinIO
-
+```
     Open http://localhost:9001
 
     Log in using minio / minio123
@@ -141,9 +141,9 @@ docker logs spark -f
     Open bucket data
 
     Navigate to delta/orders/
-
+```
 4. Load data from the Data Lake (Delta Lake)
-
+```
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
@@ -152,28 +152,25 @@ spark = SparkSession.builder \
 
 df = spark.read.format("delta").load("s3a://data/delta/orders")
 df.show()
-
+```
 Management
-Check platform status
-
+- Check platform status
+```
 docker compose ps
-
-View service logs
-
+```
+- View service logs
+```
 docker logs postgres
 docker logs kafka
 docker logs debezium
 docker logs spark
 docker logs minio
-
-Check Debezium connector status
-
+```
+- Check Debezium connector status
+```
 curl http://localhost:8083/connectors/postgres-connector/status
-
-Stop the platform
-
-# Stop containers (data is preserved)
-docker compose down
-
-# Stop containers and remove volumes (data is deleted)
-docker compose down -v
+```
+- Stop the platform and wipe the data
+```
+docker compose down -v --remove-orphans
+```

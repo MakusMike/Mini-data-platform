@@ -1,0 +1,101 @@
+product_id,name,price
+1,Laptop,4500
+2,Smartphone,2800
+3,Tablet,2200
+4,Monitor,1200
+5,Keyboard,250
+6,Mouse,180
+7,Headphones,600
+8,Smartwatch,1100
+9,Printer,900
+10,Scanner,850
+11,Webcam,300
+12,Microphone,450
+13,Speaker,700
+14,Router,500
+15,Modem,400
+16,Powerbank,200
+17,Charger,120
+18,USB Cable,50
+19,HDMI Cable,70
+20,SSD Drive,650
+21,HDD Drive,450
+22,Graphics Card,3200
+23,Processor,2800
+24,Motherboard,1500
+25,RAM Memory,900
+26,Cooling Fan,180
+27,CPU Cooler,350
+28,PC Case,600
+29,Power Supply,700
+30,VR Headset,2400
+31,Gamepad,300
+32,Joystick,350
+33,Drone,4200
+34,Action Camera,1800
+35,Security Camera,950
+36,Smart Bulb,120
+37,Smart Plug,150
+38,Smart Lock,1300
+39,Earbuds,800
+40,Bluetooth Speaker,650
+41,Projector,2100
+42,E Reader,1400
+43,Digital Radio,500
+44,Car Charger,90
+45,Dash Cam,1100
+46,WiFi Extender,300
+47,Network Switch,750
+48,Server Rack,4800
+49,NAS Storage,3200
+50,External SSD,900
+51,External HDD,750
+52,USB Hub,160
+53,Touchscreen,2600
+54,Drawing Tablet,1900
+55,Barcode Scanner,850
+56,POS Terminal,4200
+57,Smart Scale,350
+58,Smart Thermostat,1200
+59,Air Purifier,1600
+60,Robot Vacuum,2900
+61,Electric Scooter,5200
+62,3D Printer,6800
+63,Game Console,2500
+64,Console Controller,350
+65,Streaming Stick,300
+66,TV Box,450
+67,Smart TV,5200
+68,LED Strip,180
+69,Wireless Charger,220
+70,Noise Cancelling Headphones,1400
+71,Fitness Band,500
+72,Portable Monitor,1700
+73,Studio Light,900
+74,Audio Interface,1100
+75,MIDI Keyboard,1600
+76,Smart Glasses,3500
+77,Wireless Mouse,220
+78,Mechanical Keyboard,850
+79,Gaming Chair,1900
+80,Gaming Desk,2100
+81,Laptop Stand,180
+82,USB Microphone,500
+83,Flash Drive,120
+84,Memory Card,150
+85,Card Reader,100
+86,Smart Doorbell,900
+87,Video Intercom,1800
+88,Digital Clock,250
+89,Weather Station,700
+90,Signal Booster,1300
+91,Portable Speaker,400
+92,Wireless Router,650
+93,Mini PC,2400
+94,All in One PC,4800
+95,Laptop Dock,900
+96,Screen Cleaner,60
+97,Web Server,7200
+98,Industrial Tablet,5600
+99,Smart Projector,3100
+100,Conference Camera,2700

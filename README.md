@@ -5,17 +5,17 @@ This project was developed as the final assignment for the Introduction to Big D
 
 ## Architecture
 
-CSV Files
-↓
-PostgreSQL
-↓ (CDC)
-Debezium
-↓
-Kafka
-↓
-Spark Streaming
-↓
-MinIO (Delta Lake)
+CSV Files\
+    ↓\
+PostgreSQL\
+    ↓ (CDC)\
+Debezium\
+    ↓\
+Kafka\
+    ↓\
+Spark Streaming\
+    ↓\
+MinIO (Delta Lake)\
 
 
 ## Requirements
@@ -174,4 +174,5 @@ curl http://localhost:8083/connectors/postgres-connector/status
 ```
 docker compose down -v --remove-orphans
 ```
+
 
